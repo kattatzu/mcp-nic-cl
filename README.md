@@ -11,6 +11,21 @@ A Model Context Protocol (MCP) server to query .cl domain information from [NIC 
 
 ## Installation
 
+### Using npx (recommended)
+
+No installation needed. Use directly in your MCP client configuration:
+
+```json
+{
+  "mcpServers": {
+    "nic-cl": {
+      "command": "npx",
+      "args": ["-y", "@kattatzu/mcp-nic-cl"]
+    }
+  }
+}
+```
+
 ### From Source
 
 1. Clone this repository.
@@ -22,6 +37,17 @@ A Model Context Protocol (MCP) server to query .cl domain information from [NIC 
    ```bash
    npm run build
    ```
+4. Add to your MCP client configuration:
+   ```json
+   {
+     "mcpServers": {
+       "nic-cl": {
+         "command": "node",
+         "args": ["/absolute/path/to/nic-cl-mcp/dist/index.js"]
+       }
+     }
+   }
+   ```
 
 ## Usage
 
@@ -30,7 +56,7 @@ A Model Context Protocol (MCP) server to query .cl domain information from [NIC 
 You can test the server locally using the MCP Inspector:
 
 ```bash
-npx @modelcontextprotocol/inspector node dist/index.js
+npx @modelcontextprotocol/inspector npx @kattatzu/mcp-nic-cl
 ```
 
 ### In Claude Desktop or other MCP Clients
@@ -41,8 +67,8 @@ Add the following to your MCP settings configuration file:
 {
   "mcpServers": {
     "nic-cl": {
-      "command": "node",
-      "args": ["/absolute/path/to/nic-cl-mcp/dist/index.js"]
+      "command": "npx",
+      "args": ["-y", "@kattatzu/mcp-nic-cl"]
     }
   }
 }
