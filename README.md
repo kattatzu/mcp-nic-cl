@@ -101,4 +101,4 @@ Add the following to your MCP settings configuration file:
 
 ## License
 
-MIT
+ISC
