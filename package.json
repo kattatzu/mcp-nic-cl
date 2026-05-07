@@ -12,6 +12,10 @@
     "README.md",
     "LICENSE"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kattatzu/mcp-nic-cl.git"
+  },
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
@@ -25,8 +29,8 @@
     "whois",
     "chile"
   ],
-  "author": "",
-  "license": "MIT",
+  "author": "José Eduardo Rios <kattatzu@gmail.com>",
+  "license": "ISC",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.6.0",
     "axios": "^1.7.9",
