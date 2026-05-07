@@ -15,6 +15,12 @@ A Model Context Protocol (MCP) server to query .cl domain information from [NIC 
 
 No installation needed. Use directly in your MCP client configuration:
 
+1. Install global dependency
+```bash
+npm install -g @kattatzu/mcp-nic-cl
+```
+
+2. Configure MCP
 ```json
 {
   "mcpServers": {
